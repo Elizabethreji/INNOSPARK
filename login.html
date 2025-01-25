@@ -13,7 +13,7 @@
     <section class="flex justify-center items-center h-screen bg-green-100">
         <div class="bg-white p-8 rounded-lg shadow-lg w-96">
             <h2 class="text-3xl font-bold text-center mb-6">Login to EcoSwap</h2>
-            <form action="#" method="POST">
+            <form id="loginForm" method="POST">
                 <div class="mb-4">
                     <label for="email" class="block text-lg font-medium text-gray-700">Email Address</label>
                     <input type="email" id="email" name="email" class="w-full p-2 mt-2 border border-gray-300 rounded-md" required>
@@ -30,8 +30,35 @@
                     <p class="text-sm">Don't have an account? <a href="signup.html" class="text-green-600 hover:underline">Sign Up</a></p>
                 </div>
             </form>
+            <p id="loginMessage" class="text-center text-red-500 mt-4"></p>
         </div>
     </section>
 
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            const response = await fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: `email=${email}&password=${password}`
+            });
+
+            const messageElement = document.getElementById('loginMessage');
+
+            if (response.ok) {
+                messageElement.textContent = 'Logged in successfully';
+                messageElement.style.color = 'green';
+            } else {
+                const errorMessage = await response.text();
+                messageElement.textContent = errorMessage;
+            }
+        });
+    </script>
 </body>
 </html>
