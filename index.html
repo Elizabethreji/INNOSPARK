@@ -73,7 +73,7 @@
                     </a>
                 </div>
             </div>
-
+        </div>
     </header>
 
     <!-- Hero Section -->
@@ -145,35 +145,39 @@
     <!-- External JS -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Hardcoded featured products with images
+            // Hardcoded featured products with images and correct page links
             const featuredProducts = [
                 {
                     title: 'Eco-Friendly Reusable Water Bottle',
                     description: 'Made from stainless steel, perfect for on-the-go hydration.',
                     price: '19.99',
                     ecoPoints: 15,
-                    imageUrl: 'bottle.jpg'  // Replace with actual image path
+                    imageUrl: 'bottle.jpg',
+                    pageUrl: 'water-bottle.html' // Replace with actual image path and link
                 },
                 {
                     title: 'Bamboo Toothbrush Set',
                     description: 'Sustainable and eco-friendly toothbrush set made from bamboo.',
                     price: '10.99',
                     ecoPoints: 10,
-                    imageUrl: 'bambootooth.jpeg'  // Replace with actual image path
+                    imageUrl: 'bambootooth.jpeg',
+                    pageUrl: 'brush.html' // Replace with actual image path and link
                 },
                 {
                     title: 'Organic Cotton Tote Bag',
                     description: 'A stylish and durable tote bag made from organic cotton.',
                     price: '14.99',
                     ecoPoints: 12,
-                    imageUrl: 'original_personalised-organic-tote-bag.jpg'  // Replace with actual image path
+                    imageUrl: 'original_personalised-organic-tote-bag.jpg',
+                    pageUrl: 'bag.html' // Replace with actual image path and link
                 },
                 {
                     title: 'Solar Powered Garden Lights',
                     description: 'Eco-friendly garden lights powered by solar energy.',
                     price: '25.99',
                     ecoPoints: 20,
-                    imageUrl: 'soalrgarden.jpg'  // Replace with actual image path
+                    imageUrl: 'soalrgarden.jpg',
+                    pageUrl: 'light.html' // Replace with actual image path and link
                 }
             ];
 
@@ -190,57 +194,29 @@
                 const productCard = document.createElement('div');
                 productCard.className = 'featured-product bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105';
 
-                // Card structure with images
+                // Card structure with images and hyperlink
                 productCard.innerHTML = `
-                    <div class="relative">
-                        <img src="${product.imageUrl}" alt="${product.title}" class="w-full h-48 object-cover rounded-t-lg">
-                        <div class="p-5">
-                            <h4 class="text-xl font-semibold text-gray-800 mb-2">${product.title}</h4>
-                            <p class="text-gray-600 text-sm mb-4">${product.description}</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-green-600 text-lg font-bold">$${product.price}</span>
-                                <span class="text-sm text-gray-500">${product.ecoPoints} EcoPoints</span>
+                    <a href="${product.pageUrl}" class="block">
+                        <div class="relative">
+                            <img src="${product.imageUrl}" alt="${product.title}" class="w-full h-48 object-cover rounded-t-lg">
+                            <div class="p-5">
+                                <h4 class="text-xl font-semibold text-gray-800 mb-2">${product.title}</h4>
+                                <p class="text-gray-600 text-sm mb-4">${product.description}</p>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-green-600 text-lg font-bold">$${product.price}</span>
+                                    <span class="text-sm text-gray-500">${product.ecoPoints} EcoPoints</span>
+                                </div>
+                                <!-- View Product Button -->
+                                <a href="${product.pageUrl}" class="mt-4 inline-block bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 transition">
+                                    View Product
+                                </a>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 `;
 
                 // Append the product card to the container
                 productsContainer.appendChild(productCard);
-            });
-
-            // Optional: Handle Eco-Hubs if needed
-            const ecoHubsData = [
-                {
-                    name: 'Urban Green Collective',
-                    description: 'Local sustainability group in downtown',
-                    location: '2.5 miles away'
-                },
-                {
-                    name: 'Neighborhood Recyclers',
-                    description: 'Community recycling and upcycling hub',
-                    location: '4.7 miles away'
-                },
-                {
-                    name: 'Green Living Network',
-                    description: 'Eco-friendly lifestyle community',
-                    location: '3.2 miles away'
-                }
-            ];
-
-            const ecoHubsContainer = document.getElementById('eco-hubs');
-
-            ecoHubsData.forEach(hub => {
-                const hubCard = document.createElement('div');
-                hubCard.className = 'bg-white p-6 rounded-lg shadow-md';
-                hubCard.innerHTML = `
-                    <h4 class="font-bold text-xl mb-2">${hub.name}</h4>
-                    <p class="text-gray-600 mb-4">${hub.description}</p>
-                    <div class="flex items-center text-green-600">
-                        📍 ${hub.location}
-                    </div>
-                `;
-                ecoHubsContainer.appendChild(hubCard);
             });
         });
     </script>
