@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Hubs</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="eco-hubs.css" rel="stylesheet">
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="ecohub.css" />
+</head>
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <header class="bg-green-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">EcoSwap</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="index.html" class="hover:text-green-200">Home</a></li>
+                    <li><a href="shop.html" class="hover:text-green-200">Shop</a></li>
+                    <li><a href="ecohub.html" class="hover:text-green-200">Eco-Hubs</a></li>
+                    <li><a href="login.html" class="hover:text-green-200">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero h-[400px] flex items-center justify-center text-center bg-green-200 relative">
+        <div class="relative z-10 p-10 rounded-lg bg-white bg-opacity-80">
+            <h2 class="text-4xl font-bold mb-4 text-green-800">Discover Eco-Hubs Near You</h2>
+            <p class="text-xl text-gray-700">Find workshops, swap events, and more to build a sustainable community.</p>
+        </div>
+    </section>
+
+    <!-- Eco-Hubs Map -->
+    <section class="p-8">
+        <h3 class="text-2xl font-bold text-center mb-6">Eco-Hub Locations</h3>
+        <div id="eco-hubs-map" class="w-full h-[500px] rounded-md shadow-md"></div>
+        <div class="mt-4 flex justify-center">
+            <select id="activity-filter" class="border rounded p-2 mr-4">
+                <option value="">All Activities</option>
+                <option value="repair">Repair Workshops</option>
+                <option value="clothing-swap">Clothing Swaps</option>
+                <option value="upcycling">Upcycling Events</option>
+            </select>
+            <input type="text" id="location-filter" class="border rounded p-2" placeholder="Search by location" />
+            <button id="filter-btn" class="bg-green-600 text-white px-4 py-2 rounded ml-4">Apply Filters</button>
+        </div>
+    </section>
+
+    <!-- Eco-Hub Listings -->
+    <section class="p-8">
+        <h3 class="text-2xl font-bold text-center mb-6">Eco-Hub Listings</h3>
+        <div id="eco-hub-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Example Hub -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h4 class="font-bold text-xl mb-2">Urban Green Collective</h4>
+                <p class="text-gray-600">Local sustainability group in downtown.</p>
+                <p class="text-gray-600">📍 2.5 miles away</p>
+                <p class="text-gray-600">Events: Clothing Swap, Repair Workshop</p>
+                <button class="bg-green-500 text-white px-4 py-2 rounded mt-4">Join Eco-Hub</button>
+            </div>
+            <!-- Repeat similar structure for more hubs -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-600 text-white p-4 text-center">
+        © 2025 EcoSwap - All Rights Reserved
+    </footer>
+
+    <script src="ecohub.js"></script>
+</body>
+</html>

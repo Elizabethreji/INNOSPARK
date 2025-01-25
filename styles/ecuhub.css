@@ -1,0 +1,9 @@
+.hero {
+    background: url('/path/to/eco-hubs-hero.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+#eco-hubs-map {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}

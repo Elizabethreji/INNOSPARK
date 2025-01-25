@@ -1,0 +1,13 @@
+.hero {
+    background: url('/path/to/rewards-hero.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+button {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
