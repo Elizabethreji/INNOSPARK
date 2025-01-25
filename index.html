@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoSwap - Sustainable Product Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-green-600 text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="/api/placeholder/50/50" alt="EcoSwap Logo" class="h-10 w-10 mr-3">
+                <h1 class="text-2xl font-bold">EcoSwap</h1>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#" class="hover:text-green-200">Shop</a>
+                <a href="#" class="hover:text-green-200">Swap</a>
+                <a href="#" class="hover:text-green-200">Donate</a>
+                <a href="#" class="hover:text-green-200">Eco-Hubs</a>
+                <a href="#" class="hover:text-green-200">About Us</a>
+                <a href="#" class="hover:text-green-200">My EcoPoints</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <div class="relative">
+                    <input type="text" placeholder="Search..." class="bg-white text-gray-800 rounded-full px-4 py-2 w-64">
+                    <button class="absolute right-3 top-3 text-gray-500">🔍</button>
+                </div>
+                <button class="bg-white text-green-600 px-4 py-2 rounded-full">Login</button>
+            </div>
+        </div>
+    </header>
+
+   <!-- Hero Section -->
+<section id="hero" class="hero h-[600px] flex items-center justify-center text-center relative">
+    <img src="hero.jpg" alt="Hero Image" class="absolute inset-0 w-full h-full object-cover opacity-60">
+    <div class="relative z-10 bg-black bg-opacity-50 p-10 rounded-lg">
+        <h2 class="text-5xl text-white font-bold mb-6">Give Your Goods a Second Life</h2>
+        <p class="text-xl text-white mb-8">Sustainable shopping starts here. Buy, sell, swap, and donate eco-friendly products.</p>
+        <button class="bg-green-500 text-white px-8 py-3 rounded-full hover:bg-green-600 transition">Browse Now</button>
+    </div>
+</section>
+
+
+    <!-- Featured Products -->
+    <section class="container mx-auto my-12">
+        <h3 class="text-3xl font-bold text-center mb-8">Featured Products</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="featured-products">
+            <!-- Products will be dynamically populated by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Eco-Hubs Section -->
+    <section class="bg-green-100 py-16">
+        <div class="container mx-auto text-center">
+            <h3 class="text-3xl font-bold mb-8">Join Your Local Eco-Hub</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="eco-hubs">
+                <!-- Eco-hubs will be dynamically populated -->
+            </div>
+            <button class="mt-8 bg-green-500 text-white px-6 py-3 rounded-full">Find Your Eco-Hub</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h4 class="font-bold mb-4">EcoSwap</h4>
+                <p>Sustainable marketplace for eco-friendly living</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Quick Links</h4>
+                <ul>
+                    <li><a href="#" class="hover:text-green-300">Shop</a></li>
+                    <li><a href="#" class="hover:text-green-300">Swap</a></li>
+                    <li><a href="#" class="hover:text-green-300">Donate</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Community</h4>
+                <ul>
+                    <li><a href="#" class="hover:text-green-300">Eco-Hubs</a></li>
+                    <li><a href="#" class="hover:text-green-300">Blog</a></li>
+                    <li><a href="#" class="hover:text-green-300">Events</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Connect With Us</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-2xl">🌐</a>
+                    <a href="#" class="text-2xl">📸</a>
+                    <a href="#" class="text-2xl">🐦</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-8">
+            <p>&copy; 2024 EcoSwap. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

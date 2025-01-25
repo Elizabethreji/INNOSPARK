@@ -1,0 +1,35 @@
+/* Additional custom styles beyond Tailwind */
+.hero {
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease-in-out;
+}
+
+/* Smooth hover effects */
+.featured-product {
+    transition: transform 0.3s ease;
+}
+
+.featured-product:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero {
+        height: 400px;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Additional decorative elements */
+.eco-point-badge {
+    background: linear-gradient(45deg, #4ade80, #22c55e);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-weight: bold;
+}
