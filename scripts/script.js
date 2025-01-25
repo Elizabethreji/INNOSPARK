@@ -1,50 +1,62 @@
-// Dynamically populate featured products
 document.addEventListener('DOMContentLoaded', () => {
+    // Hardcoded featured products (without images)
     const featuredProducts = [
         {
-            image: '/api/placeholder/300/200',
-            title: 'Recycled Denim Tote Bag',
-            description: 'Handmade from upcycled jeans',
-            price: '$35',
-            ecoPoints: 25
+            title: 'Eco-Friendly Reusable Water Bottle',
+            description: 'Made from stainless steel, perfect for on-the-go hydration.',
+            price: '19.99',
+            ecoPoints: 15
         },
         {
-            image: '/api/placeholder/300/200',
-            title: 'Bamboo Kitchen Utensil Set',
-            description: 'Eco-friendly cooking tools',
-            price: '$28',
-            ecoPoints: 30
+            title: 'Bamboo Toothbrush Set',
+            description: 'Sustainable and eco-friendly toothbrush set made from bamboo.',
+            price: '10.99',
+            ecoPoints: 10
         },
         {
-            image: '/api/placeholder/300/200',
-            title: 'Solar Powered Charger',
-            description: 'Charge your devices sustainably',
-            price: '$49',
-            ecoPoints: 40
+            title: 'Organic Cotton Tote Bag',
+            description: 'A stylish and durable tote bag made from organic cotton.',
+            price: '14.99',
+            ecoPoints: 12
+        },
+        {
+            title: 'Solar Powered Garden Lights',
+            description: 'Eco-friendly garden lights powered by solar energy.',
+            price: '25.99',
+            ecoPoints: 20
         }
     ];
 
     const productsContainer = document.getElementById('featured-products');
+
+    // If there are no products, show a message
+    if (featuredProducts.length === 0) {
+        productsContainer.innerHTML = '<p>No featured products available at the moment.</p>';
+        return;
+    }
+
+    // Loop through the hardcoded products and create product cards
     featuredProducts.forEach(product => {
         const productCard = document.createElement('div');
-        productCard.className = 'bg-white rounded-lg shadow-md overflow-hidden';
+        productCard.className = 'featured-product bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105';
+
+        // Card structure without images
         productCard.innerHTML = `
-            <img src="${product.image}" alt="${product.title}" class="w-full h-48 object-cover">
-            <div class="p-4">
-                <h4 class="font-bold text-xl mb-2">${product.title}</h4>
-                <p class="text-gray-600 mb-4">${product.description}</p>
+            <div class="p-5">
+                <h4 class="text-xl font-semibold text-gray-800 mb-2">${product.title}</h4>
+                <p class="text-gray-600 text-sm mb-4">${product.description}</p>
                 <div class="flex justify-between items-center">
-                    <span class="text-green-600 font-bold">${product.price}</span>
-                    <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full">
-                        ${product.ecoPoints} EcoPoints
-                    </span>
+                    <span class="text-green-600 text-lg font-bold">$${product.price}</span>
+                    <span class="text-sm text-gray-500">${product.ecoPoints} EcoPoints</span>
                 </div>
             </div>
         `;
+
+        // Append the product card to the container
         productsContainer.appendChild(productCard);
     });
 
-    // Similar dynamic population for Eco-Hubs and Community Highlights
+    // Optional: Handle Eco-Hubs if needed
     const ecoHubsData = [
         {
             name: 'Urban Green Collective',
@@ -64,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const ecoHubsContainer = document.getElementById('eco-hubs');
+
     ecoHubsData.forEach(hub => {
         const hubCard = document.createElement('div');
         hubCard.className = 'bg-white p-6 rounded-lg shadow-md';
