@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate | EcoSwap</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="donate.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header bg-green-500 text-white py-4">
+        <div class="logo text-xl font-bold">EcoSwap</div>
+        <nav class="nav space-x-6">
+            <a href="index.html" class="hover:text-gray-300">Home</a>
+            <a href="shop.html" class="hover:text-gray-300">Shop</a>
+            <a href="swap.html" class="hover:text-gray-300">Swap</a>
+            <a href="donate.html" class="hover:text-gray-300">Donate</a>
+            <a href="eco-hubs.html" class="hover:text-gray-300">Eco-Hubs</a>
+            <a href="about.html" class="hover:text-gray-300">About Us</a>
+            <a href="account.html" class="hover:text-gray-300">My Account</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search..." class="p-2 rounded-l-md">
+            <button class="bg-gray-500 text-white p-2 rounded-r-md">🔍</button>
+        </div>
+        <div class="user-icon">
+            <a href="login.html">🔒</a> <!-- User Profile Icon -->
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero text-center bg-cover bg-center py-32" style="background-image: url('donate.jpg');">
+        <h1 class="text-4xl font-bold text-white">Make a Difference with Your Donations</h1>
+        <p class="text-lg text-white mt-4">Help build a sustainable future by giving your unused items a new purpose.</p>
+        <button onclick="document.querySelector('#donation-options').scrollIntoView()" class="mt-6 px-6 py-3 bg-green-600 text-white rounded-md hover:bg-green-700">Get Started</button>
+    </section>
+
+    <!-- Donation Options Section -->
+    <section id="donation-options" class="donation-options text-center py-16">
+        <h2 class="text-3xl font-semibold">How Would You Like to Donate?</h2>
+        <div class="options flex justify-around mt-8">
+            <div class="option bg-green-100 p-6 rounded-lg shadow-lg w-1/3">
+                <h3 class="text-2xl font-medium">I Have to Donate</h3>
+                <p>List items you want to donate to local charities.</p>
+                <button onclick="document.querySelector('#donate-form').scrollIntoView()" class="mt-4 px-6 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">Donate Items</button>
+            </div>
+            <div class="option bg-green-100 p-6 rounded-lg shadow-lg w-1/3">
+                <h3 class="text-2xl font-medium">Find Donation Centers</h3>
+                <p>Locate donation centers near you and learn what they accept.</p>
+                <button onclick="document.querySelector('#donation-centers').scrollIntoView()" class="mt-4 px-6 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">Find Centers</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- "I Have to Donate" Section -->
+    <section id="donate-form" class="donate-form py-16 bg-gray-100">
+        <h2 class="text-3xl font-semibold text-center">Donate Items</h2>
+        <form class="max-w-xl mx-auto mt-8">
+            <label for="item-name" class="block">Item Name:</label>
+            <input type="text" id="item-name" name="item-name" class="w-full p-2 mb-4 rounded-md" required>
+
+            <label for="category" class="block">Category:</label>
+            <select id="category" name="category" class="w-full p-2 mb-4 rounded-md">
+                <option value="clothing">Clothing</option>
+                <option value="electronics">Electronics</option>
+                <option value="books">Books</option>
+                <option value="furniture">Furniture</option>
+            </select>
+
+            <label for="condition" class="block">Condition:</label>
+            <select id="condition" name="condition" class="w-full p-2 mb-4 rounded-md">
+                <option value="good">Good</option>
+                <option value="fair">Fair</option>
+                <option value="poor">Poor</option>
+            </select>
+
+            <label for="charity" class="block">Select Charity:</label>
+            <select id="charity" name="charity" class="w-full p-2 mb-4 rounded-md">
+                <option value="charity-1">Charity 1</option>
+                <option value="charity-2">Charity 2</option>
+                <option value="specify">Specify Charity</option>
+            </select>
+
+            <label for="location" class="block">Pickup Location:</label>
+            <input type="text" id="location" name="location" class="w-full p-2 mb-4 rounded-md" required>
+
+            <label for="contact" class="block">Contact Information:</label>
+            <input type="text" id="contact" name="contact" class="w-full p-2 mb-4 rounded-md" required>
+
+            <button type="submit" class="w-full px-6 py-3 bg-green-600 text-white rounded-md hover:bg-green-700">Donate Item</button>
+        </form>
+    </section>
+
+    <!-- "Find Donation Centers" Section -->
+    <section id="donation-centers" class="donation-centers py-16 bg-gray-100">
+        <h2 class="text-3xl font-semibold text-center">Find Donation Centers</h2>
+        <div class="search-center flex justify-center mt-8">
+            <input type="text" placeholder="Enter location..." class="p-2 rounded-l-md">
+            <button class="bg-gray-500 text-white p-2 rounded-r-md">Search</button>
+        </div>
+
+        <div id="map" class="mt-8" style="height: 400px; background: #e0e0e0;">[Interactive Map Placeholder]</div>
+
+        <div class="center-list mt-8">
+            <h3 class="text-2xl font-medium">Nearby Centers</h3>
+            <div class="center bg-white p-4 rounded-lg shadow-lg mt-4">
+                <h4 class="text-xl">Charity Name</h4>
+                <p>Location: 123 Green Street</p>
+                <p>Accepted Items: Clothing, Electronics</p>
+                <p>Contact: info@charity.com</p>
+                <p>Hours: Mon-Fri, 9 AM - 5 PM</p>
+                <a href="https://maps.google.com?q=123+Green+Street" target="_blank" class="text-green-600">Get Directions</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-green-500 text-white py-4 text-center">
+        <p>© 2025 EcoSwap. All Rights Reserved.</p>
+        <a href="#" class="text-white mx-2">Terms of Service</a>|<a href="#" class="text-white mx-2">Privacy Policy</a>
+        <div class="social-media mt-4">
+            <a href="#" class="text-white mx-2">Facebook</a>
+            <a href="#" class="text-white mx-2">Twitter</a>
+            <a href="#" class="text-white mx-2">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>

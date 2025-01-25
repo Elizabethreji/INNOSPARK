@@ -1,0 +1,63 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Custom Styles for EcoSwap Donate Page */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.hero {
+    background: url('donate.jpeg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    background-size: cover;
+}
+
+.donate-form form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.donate-form input, .donate-form select, .donate-form button {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.donation-options .options {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.donation-centers {
+    padding: 50px 20px;
+}
+
+.footer {
+    background-color: #2f855a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}

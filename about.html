@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - EcoSwap</title>
+    <title>Donate | EcoSwap</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="about.css" rel="stylesheet">
+    <link href="donate.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100">
 
@@ -17,9 +17,11 @@
                 <ul class="flex space-x-4">
                     <li><a href="index.html" class="hover:text-green-200">Home</a></li>
                     <li><a href="shop.html" class="hover:text-green-200">Shop</a></li>
+                    <li><a href="swap.html" class="hover:text-green-200">Swap</a></li>
+                    <li><a href="donate.html" class="hover:text-green-200">Donate</a></li>
                     <li><a href="eco-hubs.html" class="hover:text-green-200">Eco-Hubs</a></li>
-                    <li><a href="rewards.html" class="hover:text-green-200">Rewards</a></li>
-                    <li><a href="login.html" class="hover:text-green-200">Login</a></li>
+                    <li><a href="about.html" class="hover:text-green-200">About Us</a></li>
+                    <li><a href="account.html" class="hover:text-green-200">My Account</a></li>
                 </ul>
             </nav>
         </div>
@@ -28,75 +30,89 @@
     <!-- Hero Section -->
     <section class="hero h-[300px] flex items-center justify-center text-center bg-green-200 relative">
         <div class="relative z-10 p-6 rounded-lg bg-white bg-opacity-80">
-            <h2 class="text-4xl font-bold mb-4 text-green-800">About EcoSwap</h2>
-            <p class="text-lg text-gray-700">Learn more about our mission, values, and impact.</p>
+            <h2 class="text-4xl font-bold mb-4 text-green-800">Make a Difference with Your Donations</h2>
+            <p class="text-lg text-gray-700">Help build a sustainable future by giving your unused items a new purpose.</p>
         </div>
     </section>
 
-    <!-- About EcoSwap -->
-    <section class="p-8">
-        <div class="container mx-auto">
-            <h3 class="text-2xl font-bold text-center mb-6">Our Mission</h3>
-            <p class="text-gray-700 text-center mb-8">
-                We are committed to creating a more sustainable future by redefining how people shop and interact with their belongings. Our mission is to empower individuals and communities to embrace eco-friendly practices by providing a platform where second-hand items and eco-conscious products are valued and accessible. Through innovative features like the Eco-Footprint Tracker, product swaps, and gamified rewards, we aim to inspire positive environmental action and promote a culture of reuse, reducing waste and encouraging mindful consumption. Together, we can make sustainability a way of life.
-            </p>
-
-            <h3 class="text-2xl font-bold text-center mb-6">Our Core Values</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h4 class="text-xl font-bold mb-2">Sustainability</h4>
-                    <p class="text-gray-600">Every decision we make prioritizes the health of our planet.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h4 class="text-xl font-bold mb-2">Community</h4>
-                    <p class="text-gray-600">We believe in the power of people coming together for a greater good.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h4 class="text-xl font-bold mb-2">Innovation</h4>
-                    <p class="text-gray-600">We leverage technology to make sustainable living easy and accessible.</p>
-                </div>
+    <!-- Donation Options -->
+    <section id="donation-options" class="p-8 bg-white">
+        <h2 class="text-2xl font-bold text-center text-green-800 mb-6">How Would You Like to Donate?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="option p-6 bg-green-100 rounded-lg shadow-lg text-center">
+                <h3 class="text-xl font-bold mb-2">Donate Items</h3>
+                <p class="text-gray-600 mb-4">List items you want to donate to local charities.</p>
+                <button onclick="document.querySelector('#donate-form').scrollIntoView()" class="bg-green-600 text-white py-2 px-4 rounded hover:bg-green-500">Donate Items</button>
+            </div>
+            <div class="option p-6 bg-green-100 rounded-lg shadow-lg text-center">
+                <h3 class="text-xl font-bold mb-2">Find Donation Centers</h3>
+                <p class="text-gray-600 mb-4">Locate donation centers near you and learn what they accept.</p>
+                <button onclick="document.querySelector('#donation-centers').scrollIntoView()" class="bg-green-600 text-white py-2 px-4 rounded hover:bg-green-500">Find Centers</button>
             </div>
         </div>
     </section>
 
-    <!-- Team Information -->
-    <section class="p-8 bg-green-50">
-        <div class="container mx-auto">
-            <h3 class="text-2xl font-bold text-center mb-6">Meet Our Team</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Team Member 1 -->
-                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                    <img src="/path/to/team1.jpg" alt="Team Member 1" class="w-24 h-24 mx-auto rounded-full mb-4">
-                    <h4 class="text-xl font-bold mb-2">Jane Doe</h4>
-                    <p class="text-gray-600">Founder & CEO</p>
-                </div>
+    <!-- I Have to Donate Section -->
+    <section id="donate-form" class="p-8 bg-gray-50">
+        <h2 class="text-2xl font-bold text-center text-green-800 mb-6">Donate Items</h2>
+        <form class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+            <label for="item-name" class="block text-lg font-medium text-gray-700 mb-2">Item Name:</label>
+            <input type="text" id="item-name" name="item-name" class="w-full p-3 mb-4 border border-gray-300 rounded-lg" required>
 
-                <!-- Team Member 2 -->
-                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                    <img src="/path/to/team2.jpg" alt="Team Member 2" class="w-24 h-24 mx-auto rounded-full mb-4">
-                    <h4 class="text-xl font-bold mb-2">John Smith</h4>
-                    <p class="text-gray-600">Sustainability Expert</p>
-                </div>
+            <label for="category" class="block text-lg font-medium text-gray-700 mb-2">Category:</label>
+            <select id="category" name="category" class="w-full p-3 mb-4 border border-gray-300 rounded-lg">
+                <option value="clothing">Clothing</option>
+                <option value="electronics">Electronics</option>
+                <option value="books">Books</option>
+                <option value="furniture">Furniture</option>
+            </select>
 
-                <!-- Team Member 3 -->
-                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                    <img src="/path/to/team3.jpg" alt="Team Member 3" class="w-24 h-24 mx-auto rounded-full mb-4">
-                    <h4 class="text-xl font-bold mb-2">Alice Johnson</h4>
-                    <p class="text-gray-600">Tech Lead</p>
-                </div>
-            </div>
-        </div>
+            <label for="condition" class="block text-lg font-medium text-gray-700 mb-2">Condition:</label>
+            <select id="condition" name="condition" class="w-full p-3 mb-4 border border-gray-300 rounded-lg">
+                <option value="good">Good</option>
+                <option value="fair">Fair</option>
+                <option value="poor">Poor</option>
+            </select>
+
+            <label for="charity" class="block text-lg font-medium text-gray-700 mb-2">Select Charity:</label>
+            <select id="charity" name="charity" class="w-full p-3 mb-4 border border-gray-300 rounded-lg">
+                <option value="charity-1">Charity 1</option>
+                <option value="charity-2">Charity 2</option>
+                <option value="specify">Specify Charity</option>
+            </select>
+
+            <label for="location" class="block text-lg font-medium text-gray-700 mb-2">Pickup Location:</label>
+            <input type="text" id="location" name="location" class="w-full p-3 mb-4 border border-gray-300 rounded-lg" required>
+
+            <label for="contact" class="block text-lg font-medium text-gray-700 mb-2">Contact Information:</label>
+            <input type="text" id="contact" name="contact" class="w-full p-3 mb-4 border border-gray-300 rounded-lg" required>
+
+            <button type="submit" class="bg-green-600 text-white py-3 px-6 rounded hover:bg-green-500 w-full">Donate Item</button>
+        </form>
     </section>
 
-    <!-- Impact Statement -->
-    <section class="p-8">
-        <div class="container mx-auto">
-            <h3 class="text-2xl font-bold text-center mb-6">Our Impact</h3>
-            <p class="text-gray-700 text-center mb-8">
-                Since launching EcoSwap, we’ve helped reduce waste by facilitating the reuse of thousands of items. 
-                Our community has collectively saved over 10,000 kilograms of CO₂ emissions through sustainable 
-                practices. Together, we’re making a tangible difference for the planet and future generations.
-            </p>
+    <!-- Find Donation Centers Section -->
+    <section id="donation-centers" class="p-8">
+        <h2 class="text-2xl font-bold text-center text-green-800 mb-6">Find Donation Centers</h2>
+        <div class="max-w-2xl mx-auto mb-6">
+            <input type="text" placeholder="Enter location..." class="w-full p-3 mb-4 border border-gray-300 rounded-lg" />
+            <button class="bg-green-600 text-white py-3 px-6 rounded hover:bg-green-500 w-full">Search</button>
+        </div>
+        <div id="map" class="bg-gray-200 h-[400px] mb-6">[Interactive Map Placeholder]</div>
+        <div class="center-list">
+            <h3 class="text-xl font-bold text-green-800 mb-4">Nearby Centers</h3>
+            <div class="center p-4 bg-white rounded-lg shadow mb-4">
+                <h4 class="text-lg font-semibold">Charity Name</h4>
+                <p>Location: 123 Green Street</p>
+                <p>Accepted Items: Clothing, Electronics</p>
+                <p>Contact: info@charity.com</p>
+            </div>
+            <div class="center p-4 bg-white rounded-lg shadow mb-4">
+                <h4 class="text-lg font-semibold">Charity Name</h4>
+                <p>Location: 456 Blue Avenue</p>
+                <p>Accepted Items: Books, Furniture</p>
+                <p>Contact: contact@charity.com</p>
+            </div>
         </div>
     </section>
 
