@@ -1,20 +1,20 @@
-# [Project Name] 🎯
+# [ECOSWAP] 🎯
 
 
-## Basic Details
-### Team Name: [Name]
+##Sustainable Product Marketplace Project Plan
+### Team Name: [InnoSpark]
 
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Member 1: [Elizabeth Reji] - [LBS Institute Of Technology for Women Poojappura Thiruvananthapuram]
+- Member 2: [Athira K] - [LBS Institute Of Technology for Women Poojappura Thiruvananthapuram]
+
 
 ### Hosted Project Link
 [mention your project hosted project link here]
 
 ### Project Description
-[2-3 lines about what your project does]
+[EcoSwap is a sustainable product marketplace for buying, selling, swapping, or donating eco-friendly and second-hand items. It focuses on sustainability with features like an Eco-Footprint Tracker, gamified rewards (EcoPoints), AI-powered product matching, and a community-driven ecosystem. The platform includes an EcoHub for sustainable ecology enthusiasts to connect and an AI bot for providing sustainable education.]
 
 ### The Problem statement
 [What ridiculous problem are you solving?]
