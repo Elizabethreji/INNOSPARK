@@ -1,61 +1,79 @@
 const express = require('express');
+const path = require('path'); // For handling file paths
 const mysql = require('mysql2');
 const bodyParser = require('body-parser');
-const bcrypt = require('bcryptjs');
-const path = require('path');
 
+// Initialize Express app
 const app = express();
+const PORT = 3000;
+
+// Middleware to parse incoming JSON data
+app.use(bodyParser.json());
+
+// Serve static files from the "public" directory
+app.use(express.static(path.join(__dirname, 'public')));
 
 // MySQL database connection
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'Athira2004@',
-    database: 'ecoswap'
+  host: 'localhost',  // Database host (localhost)
+  user: 'root',       // Your MySQL username
+  password: 'Athira2004@', // Your MySQL password
+  database: 'ecoswap', // Your database name
 });
 
-// Check the connection
+// Connect to the MySQL database
 db.connect((err) => {
-    if (err) {
-        console.error('Error connecting to MySQL database:', err.message);
-    } else {
-        console.log('Connected to MySQL database successfully!');
-    }
+  if (err) {
+    console.error('Error connecting to the MySQL database:', err.message);
+    process.exit(1); // Exit the process if the connection fails
+  } else {
+    console.log('Connected to the MySQL database');
+  }
 });
 
-// Middleware
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'public'))); // Serve static files
+// Routes
+app.get('/', (req, res) => {
+  // Redirect to signup.html when visiting the root route
+  res.sendFile(path.join(__dirname, 'public', 'signup.html'));
+});
 
-// Signup route
-app.post('/signup', (req, res) => {
-    const { name, email, password } = req.body;
+app.get('/signup.html', (req, res) => {
+  // Serve signup.html when the '/signup.html' route is accessed
+  res.sendFile(path.join(__dirname, 'public', 'signup.html'));
+});
 
-    // Hash the password
-    bcrypt.hash(password, 10, (err, hashedPassword) => {
-        if (err) {
-            console.error('Error hashing password:', err.message);
-            return res.status(500).send('Error hashing password');
-        }
+// User Routes
+app.get('/users', (req, res) => {
+  const sql = 'SELECT * FROM users';
+  db.query(sql, (err, results) => {
+    if (err) {
+      console.error('Error fetching users:', err.message);
+      return res.status(500).json({ error: 'Failed to fetch users' });
+    }
+    res.status(200).json(results);
+  });
+});
 
-        // SQL query to insert a new user into the database
-        const query = `
-            INSERT INTO users (username, email, password_hash, full_name, eco_points)
-            VALUES (?, ?, ?, ?, 0)
-        `;
-        db.query(query, [name, email, hashedPassword, name], (err, result) => {
-            if (err) {
-                console.error('Database insert error:', err.message);
-                return res.status(500).send('Error inserting user into database');
-            }
-            console.log('User inserted successfully:', result);
-            res.redirect('/index.html'); // Redirect after successful signup
-        });
-    });
+// Add a user route
+app.post('/users/add', (req, res) => {
+  const { name, email } = req.body;
+
+  // Validation check
+  if (!name || !email) {
+    return res.status(400).json({ error: 'Name and email are required' });
+  }
+
+  const sql = 'INSERT INTO users (name, email) VALUES (?, ?)';
+  db.query(sql, [name, email], (err, result) => {
+    if (err) {
+      console.error('Error adding user:', err.message);
+      return res.status(500).json({ error: 'Failed to add user' });
+    }
+    res.status(201).json({ message: 'User added successfully', userId: result.insertId });
+  });
 });
 
 // Start the server
-app.listen(3000, () => {
-    console.log('Server is running on http://localhost:3000');
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:3000`);
 });
