@@ -110,7 +110,8 @@ For Software:
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](Screenshot 2025-01-26 102952.png)
+![Screenshot1](![Screenshot 2025-01-26 102952](https://github.com/user-attachments/assets/65685d58-e3c0-4d69-945b-be15350a4bd6)
+)
 *This is the main page of the website.And from this page it will navigate to another pages *
 
 ![Screenshot2](Screenshot 2025-01-26 103209.png)
