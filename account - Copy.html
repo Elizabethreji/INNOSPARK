@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account | EcoSwap</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="account.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header bg-green-500 text-white py-4">
+        <div class="logo text-xl font-bold">EcoSwap</div>
+        <nav class="nav space-x-6">
+            <a href="index.html" class="hover:text-gray-300">Home</a>
+            <a href="shop.html" class="hover:text-gray-300">Shop</a>
+            <a href="swap.html" class="hover:text-gray-300">Swap</a>
+            <a href="donate.html" class="hover:text-gray-300">Donate</a>
+            <a href="eco-hubs.html" class="hover:text-gray-300">Eco-Hubs</a>
+            <a href="about.html" class="hover:text-gray-300">About Us</a>
+            <a href="blog.html" class="hover:text-gray-300">Blog</a>
+            <a href="account.html" class="hover:text-gray-300">My Account</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search..." class="p-2 rounded-l-md">
+            <button class="bg-gray-500 text-white p-2 rounded-r-md">🔍</button>
+        </div>
+        <div class="user-icon">
+            <a href="login.html">🔒</a> <!-- User Profile Icon -->
+        </div>
+    </header>
+
+    <!-- Account Overview -->
+    <section class="account-overview py-16">
+        <div class="container mx-auto">
+            <div class="flex justify-between items-center">
+                <div class="profile flex items-center">
+                    <img src="default-profile.jpg" alt="Profile Picture" class="w-32 h-32 rounded-full border-4 border-green-600">
+                    <div class="ml-6">
+                        <h2 class="text-2xl font-semibold">Username</h2>
+                        <p class="text-gray-700">EcoPoints: 1000</p>
+                        <p class="text-gray-700">Eco-Footprint: 350kg CO₂</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Account Sections -->
+    <section class="account-sections bg-gray-100 py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold mb-8">Account Sections</h2>
+            <div class="grid grid-cols-2 gap-8">
+                <div class="section bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold">My Listings</h3>
+                    <p>Manage your current listings.</p>
+                    <a href="listings.html" class="text-green-600 hover:underline">View Listings</a>
+                </div>
+                <div class="section bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold">My Purchases</h3>
+                    <p>View your past purchases and order details.</p>
+                    <a href="purchases.html" class="text-green-600 hover:underline">View Purchases</a>
+                </div>
+                <div class="section bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold">My Swaps</h3>
+                    <p>Manage your swap transactions.</p>
+                    <a href="swaps.html" class="text-green-600 hover:underline">View Swaps</a>
+                </div>
+                <div class="section bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold">My Donations</h3>
+                    <p>Track your donation history and details.</p>
+                    <a href="donations.html" class="text-green-600 hover:underline">View Donations</a>
+                </div>
+                <div class="section bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold">Eco-Hubs</h3>
+                    <p>View and manage your joined eco-hubs.</p>
+                    <a href="eco-hubs.html" class="text-green-600 hover:underline">View Eco-Hubs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Account Settings -->
+    <section class="account-settings py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold mb-8">Account Settings</h2>
+            <div class="settings-options grid grid-cols-2 gap-8">
+                <div class="setting bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold">Profile Information</h3>
+                    <p>Edit your username, email, and contact info.</p>
+                    <a href="profile-settings.html" class="text-green-600 hover:underline">Edit Profile</a>
+                </div>
+                <div class="setting bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold">Notifications</h3>
+                    <p>Manage your email and push notifications.</p>
+                    <a href="notifications.html" class="text-green-600 hover:underline">Manage Notifications</a>
+                </div>
+                <div class="setting bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold">Privacy Settings</h3>
+                    <p>Control the visibility of your profile information.</p>
+                    <a href="privacy-settings.html" class="text-green-600 hover:underline">Edit Privacy</a>
+                </div>
+                <div class="setting bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold">Security</h3>
+                    <p>Enable two-factor authentication for added security.</p>
+                    <a href="security-settings.html" class="text-green-600 hover:underline">Manage Security</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eco-Footprint Tracker -->
+    <section class="eco-footprint py-16 bg-gray-100">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold mb-8">Eco-Footprint Tracker</h2>
+            <div class="eco-footprint-details bg-white p-8 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold">Detailed Footprint Analysis</h3>
+                <div class="grid grid-cols-2 gap-8 mt-6">
+                    <div>
+                        <h4>Transportation</h4>
+                        <p>150kg CO₂</p>
+                    </div>
+                    <div>
+                        <h4>Energy</h4>
+                        <p>120kg CO₂</p>
+                    </div>
+                    <div>
+                        <h4>Food</h4>
+                        <p>50kg CO₂</p>
+                    </div>
+                    <div>
+                        <h4>Waste</h4>
+                        <p>30kg CO₂</p>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <h4>Personalized Tips</h4>
+                    <ul class="list-disc pl-6">
+                        <li>Switch to electric vehicles to reduce transportation footprint.</li>
+                        <li>Consider energy-efficient appliances to cut down energy consumption.</li>
+                    </ul>
+                </div>
+                <div class="mt-8">
+                    <h4>Progress Tracking</h4>
+                    <p>Your footprint has reduced by 15% over the last 6 months.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-green-500 text-white py-4 text-center">
+        <p>© 2025 EcoSwap. All Rights Reserved.</p>
+        <a href="#" class="text-white mx-2">Terms of Service</a>|<a href="#" class="text-white mx-2">Privacy Policy</a>
+        <div class="social-media mt-4">
+            <a href="#" class="text-white mx-2">Facebook</a>
+            <a href="#" class="text-white mx-2">Twitter</a>
+            <a href="#" class="text-white mx-2">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>
