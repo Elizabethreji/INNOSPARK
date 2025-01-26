@@ -6,6 +6,9 @@
     <title>EcoPoints Rewards</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="ecopoints.css" rel="stylesheet">
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone"></script>
 </head>
 <body class="bg-gray-100">
 
@@ -26,7 +29,6 @@
                         </a>
                     </li>
                 </ul>
-                
             </nav>
         </div>
     </header>
@@ -39,11 +41,11 @@
         </div>
     </section>
 
-    <!-- EcoPoints Balance -->
+    <!-- EcoPoints Balance (React Component will replace this section) -->
     <section class="p-8">
         <div class="container mx-auto bg-white p-6 rounded-lg shadow-lg text-center">
             <h3 class="text-2xl font-bold mb-4">Your EcoPoints Balance</h3>
-            <p class="text-4xl font-bold text-green-600">1,250 EcoPoints</p>
+            <div id="ecoPointsBalance"></div> <!-- React will render here -->
         </div>
     </section>
 
@@ -52,8 +54,7 @@
         <div class="container mx-auto">
             <h3 class="text-2xl font-bold text-center mb-6">Rewards Catalog</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <!-- Reward Card 1 -->
+                <!-- Reward Cards -->
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <h4 class="text-xl font-bold mb-2">10% Off Your Next Purchase</h4>
                     <p class="text-gray-600 mb-4">Redeem 500 EcoPoints for a discount on your next eco-friendly product purchase.</p>
@@ -62,7 +63,6 @@
                     </button>
                 </div>
 
-                <!-- Reward Card 2 -->
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <h4 class="text-xl font-bold mb-2">Donate to Tree Planting Initiative</h4>
                     <p class="text-gray-600 mb-4">Use 750 EcoPoints to fund a tree planting project in your region.</p>
@@ -71,7 +71,6 @@
                     </button>
                 </div>
 
-                <!-- Reward Card 3 -->
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <h4 class="text-xl font-bold mb-2">Exclusive EcoSwap Tote Bag</h4>
                     <p class="text-gray-600 mb-4">Exchange 1,000 EcoPoints for a reusable, stylish tote bag.</p>
@@ -79,9 +78,6 @@
                         Redeem
                     </button>
                 </div>
-
-                <!-- Add more reward cards as needed -->
-
             </div>
         </div>
     </section>
@@ -90,6 +86,48 @@
     <footer class="bg-green-600 text-white p-4 text-center">
         © 2025 EcoSwap - All Rights Reserved
     </footer>
+
+    <!-- React Code to Manage EcoPoints Balance -->
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        const EcoPointsBalance = () => {
+            const [points, setPoints] = useState(0);
+            const [transactions, setTransactions] = useState([]);
+
+            useEffect(() => {
+                const savedPoints = localStorage.getItem('ecoPoints');
+                const savedTransactions = JSON.parse(localStorage.getItem('ecoTransactions')) || [];
+                setPoints(savedPoints ? parseInt(savedPoints) : 100);
+                setTransactions(savedTransactions);
+            }, []);
+
+            useEffect(() => {
+                localStorage.setItem('ecoPoints', points.toString());
+                localStorage.setItem('ecoTransactions', JSON.stringify(transactions));
+            }, [points, transactions]);
+
+            const addPointsTransaction = (description, amount) => {
+                const newTransaction = {
+                    id: Date.now(),
+                    description,
+                    amount,
+                    date: new Date().toLocaleString()
+                };
+
+                setTransactions([newTransaction, ...transactions]);
+                setPoints(prevPoints => prevPoints + amount);
+            };
+
+            return (
+                <div>
+                    <p className="text-4xl font-bold text-green-600">{points} EcoPoints</p>
+                </div>
+            );
+        };
+
+        ReactDOM.render(<EcoPointsBalance />, document.getElementById('ecoPointsBalance'));
+    </script>
 
 </body>
 </html>
