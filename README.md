@@ -27,7 +27,7 @@ The growing need for a platform where individuals can easily and securely exchan
    Users can easily create accounts and set up personalized profiles to track their sustainability goals. This feature enables them to tailor their experience on the platform to align with their eco-friendly values.
 
 2. **Marketplace Features (Buy, Sell, Swap)**  
-   The platform offers a marketplace where users can buy eco-friendly products, sell items they no longer need, or swap goods to reduce waste and promote sustainable consumption.
+   The platform offers a marketplace where users can buy eco-friendly products, sell items they no longer need, or swap goods  from the website by utilising ecopoints to reduce waste and promote sustainable consumption.
 
 3. **Eco-Footprint Tracker**  
    Our Eco-Footprint Tracker allows users to monitor and visualize their environmental impact based on their purchases, swaps, and other platform activities. It helps users stay mindful of their sustainability efforts.
@@ -122,9 +122,253 @@ For Software:
 )
 *This page shows the donation centres near to our location.*
 
-# Diagrams
+# EcoSwap Platform Wireframes
+
+## Diagrams
 ![Workflow](Add your workflow/architecture diagram here)
 *Add caption explaining your workflow*
+
+---
+
+## EcoSwap Profile Page Wireframe
+
+### Top Navigation
+- **Logo**
+- **Search Bar**
+- **Notifications Icon**
+- **Profile/Settings Icon**
+
+### Profile Header
+- **Profile Picture Upload Area**
+- **Username**
+- **EcoPoints Balance**
+  - Progress Bar
+  - Current Points Display
+- **Edit Profile** CTA Button
+
+### EcoPoints Section
+- **Rewards Catalog Link**
+- **Point Breakdown**
+  - Earned Points
+  - Redeemed Points
+  - Available Points
+
+### Profile Details
+- **Personal Information**
+- **Verification Status**
+- **Eco-Footprint Summary**
+  - Transportation
+  - Energy
+  - Food
+  - Waste
+
+### Bottom Navigation
+- **Home**
+- **Marketplace**
+- **Eco-Tracker**
+- **Community**
+- **Rewards**
+
+---
+
+## EcoSwap EcoHub Page Wireframe
+
+### Top Navigation
+- **Logo**
+- **Search Bar**
+- **Notifications Icon**
+- **Profile/Settings Icon**
+
+### EcoHub Header
+- **EcoHub Name**
+  - Location (if applicable)
+  - Description/Introduction
+- **Join EcoHub** CTA Button
+
+### Upcoming Events Section
+- **Event List** (if applicable)
+  - Event Title
+  - Date & Time
+  - Location
+  - Short Description
+  - RSVP/Join Button
+
+### EcoHub Activities
+- **Activity List**
+  - Activity Name
+  - Category (e.g., Discussions, Volunteer Work, etc.)
+  - Date & Time
+  - Short Description
+  - Join Activity Button
+
+### Members Section
+- **Member List**
+  - Display of members with:
+    - Profile Picture
+    - Username
+    - Brief Description (Optional)
+- **Search for Members**: Search bar to filter members by name, activity, or role.
+
+### Community Board/Discussions
+- **Discussion Threads**
+  - Thread Title
+  - Short Description
+  - Post Count
+  - Last Active Time
+- **Post New Discussion** CTA Button
+
+### EcoHub Resources
+- **Resources Section**:
+  - Links to educational content (e.g., sustainability tips, eco-friendly living guides)
+  - Downloadable PDFs or documents
+  - Video Resources
+  
+### Bottom Navigation
+- **Home**
+- **Marketplace**
+- **Eco-Tracker**
+- **Community**
+- **Rewards**
+
+---
+
+## EcoSwap Marketplace Page Wireframe
+
+### Top Navigation
+- **Logo**
+- **Search Bar**
+- **Notifications Icon**
+- **Profile/Settings Icon**
+
+### Marketplace Filter & Search
+- **Category Filters**
+  - Categories like 'Eco-Friendly', 'Second-Hand', 'Organic', etc.
+- **EcoPoints Filter**
+  - Filter products based on the reward level.
+- **Sort By** Options:
+  - Price
+  - EcoPoints
+
+### Product Listings
+- **Product Card**
+  - Product Image
+  - Product Name
+  - Price
+  - EcoPoints Earned
+  - Seller Rating
+  - Add to Cart / Swap Button
+
+### Product Details Page
+- **Product Name**
+- **Product Image(s)**
+- **Description**
+- **Price**
+- **EcoPoints Earned**
+- **Seller Information**
+  - Seller Rating
+  - Seller EcoPoints Balance
+- **Add to Cart / Swap Button**
+  
+### Bottom Navigation
+- **Home**
+- **Marketplace**
+- **Eco-Tracker**
+- **Community**
+- **Rewards**
+
+---
+
+## EcoSwap Eco-Tracker Page Wireframe
+
+### Top Navigation
+- **Logo**
+- **Search Bar**
+- **Notifications Icon**
+- **Profile/Settings Icon**
+
+### Eco-Footprint Tracker
+- **Categories of Footprint**
+  - **Transportation**
+  - **Energy**
+  - **Food**
+  - **Waste**
+  - Display each category with a progress bar or indicator.
+  
+### Personalized Tips
+- **Suggestions for Reducing Footprint**
+  - Eco-friendly tips for each category based on user behavior.
+  
+### Footprint Breakdown (Detailed)
+- **Detailed View**
+  - Show the detailed breakdown of each category’s contribution to the overall footprint.
+  
+### Bottom Navigation
+- **Home**
+- **Marketplace**
+- **Eco-Tracker**
+- **Community**
+- **Rewards**
+
+---
+
+## EcoSwap Rewards Page Wireframe
+
+### Top Navigation
+- **Logo**
+- **Search Bar**
+- **Notifications Icon**
+- **Profile/Settings Icon**
+
+### Rewards Catalog
+- **Reward Tiers**
+  - List of rewards categorized by EcoPoints required.
+  
+### Redeemable Rewards
+- **Reward Name**
+  - Reward Description
+  - EcoPoints Required
+  - Redeem Button
+
+### Bottom Navigation
+- **Home**
+- **Marketplace**
+- **Eco-Tracker**
+- **Community**
+- **Rewards**
+
+---
+
+## EcoSwap Feedback Page Wireframe
+
+### Top Navigation
+- **Logo**
+- **Search Bar**
+- **Notifications Icon**
+- **Profile/Settings Icon**
+
+### Seller Feedback
+- **Rate Seller**
+  - Rating (1 to 5 stars)
+  - Review Text
+  - Submit Feedback Button
+  
+### Buyer Feedback
+- **Rate Buyer**
+  - Rating (1 to 5 stars)
+  - Review Text
+  - Submit Feedback Button
+
+### EcoPoints Deduction Information
+- **Explanation of Points Deduction**
+  - Show how negative feedback can impact EcoPoints balance.
+
+### Bottom Navigation
+- **Home**
+- **Marketplace**
+- **Eco-Tracker**
+- **Community**
+- **Rewards**
+
 
 For Hardware:
 
