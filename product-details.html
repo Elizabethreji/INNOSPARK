@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link href="product.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Product Details</h1>
+    </header>
+
+    <main>
+        <section id="product-details">
+            <div id="product-info">
+                <!-- Product Info will be loaded here -->
+            </div>
+            <section id="analytics">
+                <h2>Product Analytics</h2>
+                <p>Views: <span id="views-count">0</span></p>
+                <p>Eco Points Earned: <span id="eco-points-earned">0</span></p>
+            </section>
+        </section>
+    </main>
+
+    <script>
+        // Get the product ID from the URL query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = parseInt(urlParams.get('id'));
+
+        const product = products.find(p => p.id === productId);
+        if (product) {
+            // Populate product details
+            document.getElementById('product-info').innerHTML = `
+                <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-cover mb-4">
+                <h3 class="text-xl font-bold">${product.name}</h3>
+                <p class="text-gray-600">Category: ${product.category}</p>
+                <p class="text-gray-600">Price: $${product.price}</p>
+                <p class="text-gray-600">Eco Points: ${product.ecoPoints}</p>
+                <p class="text-gray-600">Description: ${product.description}</p>
+            `;
+
+            // Increment views and eco points (example logic)
+            const viewsCount = parseInt(localStorage.getItem(`views-${productId}`) || 0);
+            localStorage.setItem(`views-${productId}`, viewsCount + 1);
+            document.getElementById('views-count').textContent = viewsCount + 1;
+            document.getElementById('eco-points-earned').textContent = product.ecoPoints;
+        } else {
+            document.getElementById('product-info').innerHTML = `<p>Product not found.</p>`;
+        }
+    </script>
+</body>
+</html>

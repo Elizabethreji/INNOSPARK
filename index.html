@@ -48,7 +48,7 @@
     <header class="bg-green-600 text-white p-4 shadow-md">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center">
-                <img src="/api/placeholder/50/50" alt="EcoSwap Logo" class="h-10 w-10 mr-3">
+                <img src="logo.png" alt="EcoSwap Logo" class="h-10 w-10 mr-3">
                 <h1 class="text-2xl font-bold">EcoSwap</h1>
             </div>
             <nav class="hidden md:flex space-x-6">
@@ -57,7 +57,7 @@
                 <a href="donate.html" class="hover:text-green-200">Donate</a>
                 <a href="ecohub.html" class="hover:text-green-200">Eco-Hubs</a>
                 <a href="about.html" class="hover:text-green-200">About Us</a>
-                <a href="ecopoints.html" class="hover:text-green-200">My EcoPoints</a>
+                <a href="ecopoint.html" class="hover:text-green-200">My EcoPoints</a>
             </nav>
             <div class="flex items-center space-x-4">
                 <!-- Search Bar -->
@@ -69,7 +69,7 @@
                 <!-- User Icon -->
                 <div class="user-icon">
                     <a href="account.html" class="rounded-full overflow-hidden w-10 h-10 flex items-center justify-center border-2 border-white">
-                        <img src="path-to-your-avatar-image.jpg" alt="User Avatar" class="w-full h-full object-cover">
+                        <img src="profile.png" alt="User Avatar" class="w-full h-full object-cover">
                     </a>
                 </div>
             </div>
@@ -82,7 +82,12 @@
         <div class="relative z-10 bg-black bg-opacity-50 p-10 rounded-lg">
             <h2 class="text-5xl text-white font-bold mb-6">Give Your Goods a Second Life</h2>
             <p class="text-xl text-white mb-8">Sustainable shopping starts here. Buy, sell, swap, and donate eco-friendly products.</p>
-            <button class="bg-green-500 text-white px-8 py-3 rounded-full hover:bg-green-600 transition">Browse Now</button>
+            <button 
+    class="bg-green-500 text-white px-8 py-3 rounded-full hover:bg-green-600 transition" 
+    onclick="window.location.href='shop.html'">
+    Browse Now
+</button>
+
         </div>
     </section>
 
@@ -101,7 +106,12 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="eco-hubs">
                 <!-- Eco-hubs will be dynamically populated -->
             </div>
-            <button class="mt-8 bg-green-500 text-white px-6 py-3 rounded-full">Find Your Eco-Hub</button>
+            <button 
+            class="mt-8 bg-green-500 text-white px-6 py-3 rounded-full"
+            onclick="window.location.href='ecohub.html'">
+            Find Your Eco-Hub
+        </button>
+        
         </div>
     </section>
 

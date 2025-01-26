@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Nearby Locations</title>
+    <script defer src="loc.js"></script>
+    <link rel="stylesheet" href="loc.css">
+    
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <div class="container mx-auto text-center mt-10">
+        <h1 class="text-3xl font-bold mb-6">Find Locations Near Me</h1>
+
+        <!-- Input box for selecting a place manually -->
+        <div class="mb-6">
+            <label for="place-select" class="text-lg font-semibold mb-2 block">Select Your Location:</label>
+            <select id="place-select" class="bg-white text-gray-800 rounded-lg px-4 py-2 w-64">
+                <option value="" disabled selected>Select a place...</option>
+                <option value="10.8505,76.2711">Thrissur</option>
+                <option value="9.9312,76.2673">Kochi</option>
+                <option value="11.2588,75.7804">Kozhikode</option>
+                <option value="10.0889,77.0595">Munnar</option>
+                <option value="8.5241,76.9366">Thiruvananthapuram</option>
+            </select>
+        </div>
+
+        <!-- Button to find nearby locations -->
+        <button id="find-locations-btn" class="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition">
+            Find Nearby Locations
+        </button>
+
+        <!-- Results -->
+        <ul id="location-list" class="mt-6 text-left"></ul>
+    </div>
+</body>
+</html>

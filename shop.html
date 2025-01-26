@@ -6,26 +6,24 @@
     <title>EcoSwap - Marketplace</title>
     <link href="styles/shop.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
 </head>
 <body class="bg-gray-50">
+
     <!-- Header (Similar to Home Page) -->
     <header class="bg-green-600 text-white p-4 shadow-md">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center">
-                <img src="/api/placeholder/50/50" alt="EcoSwap Logo" class="h-10 w-10 mr-3">
+                <img src="logo.png" alt="EcoSwap Logo" class="h-10 w-10 mr-3">
                 <h1 class="text-2xl font-bold">EcoSwap</h1>
             </div>
             <nav class="hidden md:flex space-x-6">
-                <a href="#" class="hover:text-green-200">Swap</a>
-                <a href="#" class="hover:text-green-200">Donate</a>
-                <a href="#" class="hover:text-green-200">Eco-Hubs</a>
+                <a href="swap.html" class="hover:text-green-200">Swap</a>
+                <a href="donate.html" class="hover:text-green-200">Donate</a>
+                <a href="ecohub.html" class="hover:text-green-200">Eco-Hubs</a>
             </nav>
             <a href="account.html" class="rounded-full overflow-hidden w-10 h-10 flex items-center justify-center border-2 border-white hover:ring-2 hover:ring-green-600 transition">
-                <img src="path-to-your-avatar-image.jpg" alt="User Avatar" class="w-full h-full object-cover">
+                <img src="profile.png" alt="User Avatar" class="w-full h-full object-cover">
             </a>
-            
-            
         </div>
     </header>
 
@@ -36,19 +34,19 @@
             
             <!-- Filters -->
             <div class="flex mb-6 space-x-4">
-                <select class="border rounded px-3 py-2">
+                <select id="category-filter" class="border rounded px-3 py-2">
                     <option>Category</option>
                     <option>Furniture</option>
                     <option>Clothing</option>
                     <option>Electronics</option>
                 </select>
-                <select class="border rounded px-3 py-2">
+                <select id="price-filter" class="border rounded px-3 py-2">
                     <option>Price Range</option>
                     <option>$0 - $50</option>
                     <option>$50 - $100</option>
                     <option>$100+</option>
                 </select>
-                <select class="border rounded px-3 py-2">
+                <select id="eco-points-filter" class="border rounded px-3 py-2">
                     <option>Eco-Points</option>
                     <option>0 - 25 Points</option>
                     <option>25 - 50 Points</option>
@@ -64,9 +62,9 @@
 
         <!-- Pagination -->
         <div class="flex justify-center space-x-4 mt-10">
-            <button class="px-4 py-2 bg-green-500 text-white rounded">Previous</button>
-            <span class="px-4 py-2">Page 1 of 5</span>
-            <button class="px-4 py-2 bg-green-500 text-white rounded">Next</button>
+            <button id="prev-btn" class="px-4 py-2 bg-green-500 text-white rounded">Previous</button>
+            <span id="page-info" class="px-4 py-2">Page 1 of 5</span>
+            <button id="next-btn" class="px-4 py-2 bg-green-500 text-white rounded">Next</button>
         </div>
     </main>
 
@@ -78,5 +76,6 @@
     </footer>
 
     <script src="shop.js"></script>
+
 </body>
 </html>
