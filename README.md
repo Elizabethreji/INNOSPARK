@@ -21,23 +21,23 @@ The growing need for a platform where individuals can easily and securely exchan
 
 ### The Solution
 
-User Registration & Profile Setup: Users create accounts to set up profiles, track their sustainability goals, and personalize their experience on the platform.
+1.User Registration & Profile Setup: Users create accounts to set up profiles, track their sustainability goals, and personalize their experience on the platform.
 
-Marketplace Features (Buy, Sell, Swap): A platform for buying new or second-hand eco-friendly products, selling items, or swapping goods to promote sustainable consumption.
+2.Marketplace Features (Buy, Sell, Swap): A platform for buying new or second-hand eco-friendly products, selling items, or swapping goods to promote sustainable consumption.
 
-Eco-Footprint Tracker: A tool to track and visualize the user’s environmental impact based on their activities like purchases and swaps.
+3.Eco-Footprint Tracker: A tool to track and visualize the user’s environmental impact based on their activities like purchases and swaps.
 
-Gamification (EcoPoints Rewards): Users earn EcoPoints for eco-friendly actions, which can be redeemed for rewards like discounts or donations to green causes.
+4.Gamification (EcoPoints Rewards): Users earn EcoPoints for eco-friendly actions, which can be redeemed for rewards like discounts or donations to green causes.
 
-AI-Based Product Matching: AI algorithms suggest eco-friendly products based on user preferences, past purchases, and sustainability goals.
+5.AI-Based Product Matching: AI algorithms suggest eco-friendly products based on user preferences, past purchases, and sustainability goals.
 
-Community Engagement Features (Forums, Eco-Hubs): Users can interact, share tips, and collaborate on eco-projects through discussion forums and community hubs.
+6.Community Engagement Features (Forums, Eco-Hubs): Users can interact, share tips, and collaborate on eco-projects through discussion forums and community hubs.
 
-Trust and Transparency (Rating System, Verified Profiles): A rating system for users to leave feedback and verified profiles to ensure trust and safety in transactions.
+7.Trust and Transparency (Rating System, Verified Profiles): A rating system for users to leave feedback and verified profiles to ensure trust and safety in transactions.
 
-Educational Content (Blogs, Tutorials, Videos): A resource center offering blogs, tutorials, and videos to educate users on sustainable living and eco-friendly products.
+8.Educational Content (Blogs, Tutorials, Videos): A resource center offering blogs, tutorials, and videos to educate users on sustainable living and eco-friendly products.
 
-Feedback System with EcoPoints Deduction for Sellers: Sellers face EcoPoint deductions for negative feedback, promoting quality service and accountability.
+9.Feedback System with EcoPoints Deduction for Sellers: Sellers face EcoPoint deductions for negative feedback, promoting quality service and accountability.
 ## Technical Details
 ### Technologies/Components Used
 For Software:
