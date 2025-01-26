@@ -110,17 +110,17 @@ For Software:
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1] [Screenshot 2025-01-26 102952](https://github.com/user-attachments/assets/65685d58-e3c0-4d69-945b-be15350a4bd6)
-)
-*This is the main page of the website.And from this page it will navigate to another pages *
+![Screenshot1] ![Screenshot 2025-01-26 102952](https://github.com/user-attachments/assets/65685d58-e3c0-4d69-945b-be15350a4bd6)
+
+This is the main page of the website.And from this page it will navigate to another pages 
 
 ![Screenshot2]![Screenshot 2025-01-26 103209](https://github.com/user-attachments/assets/fe8bae80-fd43-49bf-825e-513a01821338)
 
-*This is the page we get when we click on featuring products .Each featured product is displayed independently.*
+This is the page we get when we click on featuring products .Each featured product is displayed independently.
 
 ![Screenshot3]![Screenshot 2025-01-26 103455](https://github.com/user-attachments/assets/0a29c7cf-aae1-4a87-903f-85ddb40ea05d)
 
-*This page shows the donation centres near to our location.*
+This page shows the donation centres near to our location.
 
 # EcoSwap Platform Wireframes
 
