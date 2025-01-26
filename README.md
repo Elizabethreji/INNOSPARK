@@ -110,16 +110,16 @@ For Software:
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](![Screenshot 2025-01-26 102952](https://github.com/user-attachments/assets/65685d58-e3c0-4d69-945b-be15350a4bd6)
+![Screenshot1] [Screenshot 2025-01-26 102952](https://github.com/user-attachments/assets/65685d58-e3c0-4d69-945b-be15350a4bd6)
 )
 *This is the main page of the website.And from this page it will navigate to another pages *
 
-![Screenshot2](![Screenshot 2025-01-26 103209](https://github.com/user-attachments/assets/fe8bae80-fd43-49bf-825e-513a01821338)
-)
+![Screenshot2]![Screenshot 2025-01-26 103209](https://github.com/user-attachments/assets/fe8bae80-fd43-49bf-825e-513a01821338)
+
 *This is the page we get when we click on featuring products .Each featured product is displayed independently.*
 
-![Screenshot3](![Screenshot 2025-01-26 103455](https://github.com/user-attachments/assets/0a29c7cf-aae1-4a87-903f-85ddb40ea05d)
-)
+![Screenshot3]![Screenshot 2025-01-26 103455](https://github.com/user-attachments/assets/0a29c7cf-aae1-4a87-903f-85ddb40ea05d)
+
 *This page shows the donation centres near to our location.*
 
 # EcoSwap Platform Wireframes
@@ -383,17 +383,17 @@ For Hardware:
 ![Team](Add photo of your team here)
 
 
-![Components](![Screenshot 2025-01-26 102852](https://github.com/user-attachments/assets/9d98036b-214e-4a7a-bd33-36319ae195f2)
-)
+![Components]![Screenshot 2025-01-26 102852](https://github.com/user-attachments/assets/9d98036b-214e-4a7a-bd33-36319ae195f2)
+
 *This is the signup page*
 
-![Build](![Screenshot 2025-01-26 102911](https://github.com/user-attachments/assets/f40c29cf-cbb1-422f-94aa-d3f1c1068e77)
-)
+![Build]![Screenshot 2025-01-26 102911](https://github.com/user-attachments/assets/f40c29cf-cbb1-422f-94aa-d3f1c1068e77)
+
 *Login page*
 
-![Final](![Screenshot 2025-01-26 102952](https://github.com/user-attachments/assets/b1c94ed8-bebe-42bf-85b0-becb8320f322)
-)(![Screenshot 2025-01-26 103350](https://github.com/user-attachments/assets/930e9058-c3b8-4158-974e-1b6975a38b07)
-)
+![Final]![Screenshot 2025-01-26 102952](https://github.com/user-attachments/assets/b1c94ed8-bebe-42bf-85b0-becb8320f322)
+![Screenshot 2025-01-26 103350](https://github.com/user-attachments/assets/930e9058-c3b8-4158-974e-1b6975a38b07)
+
 *The main page of the website*
 
 ### Project Demo
