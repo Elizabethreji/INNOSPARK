@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bamboo Toothbrush - EcoSwap</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Additional custom styles beyond Tailwind */
+        .product-image {
+            max-width: 300px;
+            max-height: 300px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header class="bg-green-600 text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="/api/placeholder/50/50" alt="EcoSwap Logo" class="h-10 w-10 mr-3">
+                <h1 class="text-2xl font-bold">EcoSwap</h1>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="shop.html" class="hover:text-green-200">Shop</a>
+                <a href="swap.html" class="hover:text-green-200">Swap</a>
+                <a href="donate.html" class="hover:text-green-200">Donate</a>
+                <a href="ecohub.html" class="hover:text-green-200">Eco-Hubs</a>
+                <a href="about.html" class="hover:text-green-200">About Us</a>
+                <a href="ecopoints.html" class="hover:text-green-200">My EcoPoints</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Product Detail Section -->
+    <section class="container mx-auto my-12">
+        <div class="flex flex-col md:flex-row items-center justify-between bg-white p-6 rounded-lg shadow-lg">
+            <!-- Product Image -->
+            <div class="w-full md:w-1/2 text-center mb-6 md:mb-0">
+                <img src="bambootooth.jpeg" alt="Bamboo Toothbrush" class="product-image mx-auto mb-4">
+                <p class="text-gray-600 text-xl">Bamboo Toothbrush Set</p>
+            </div>
+
+            <!-- Product Info -->
+            <div class="w-full md:w-1/2">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Bamboo Toothbrush Set</h2>
+                <p class="text-gray-700 mb-4">Sustainable and eco-friendly toothbrush set made from bamboo. Helps reduce plastic waste while keeping your teeth clean and healthy.</p>
+                <div class="flex items-center space-x-4 mb-6">
+                    <span class="text-lg font-bold text-green-600">$10.99</span>
+                    <span class="text-sm text-gray-500">EcoPoints: 10</span>
+                </div>
+
+                <!-- Stock Status -->
+                <div class="mb-6">
+                    <p class="text-xl text-red-500 font-semibold mb-2">Status: Already Sold</p>
+                    <p class="text-sm text-gray-600">Sorry, this product is currently out of stock. We will notify you when it is back in stock!</p>
+                </div>
+
+                <!-- Notify Me Form -->
+                <div>
+                    <label for="email" class="block text-lg text-gray-700 mb-2">Enter your email to get notified:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" class="bg-gray-100 border border-gray-300 text-gray-700 rounded-md p-3 w-full mb-4">
+                    <button class="bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 transition w-full">Notify Me</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h4 class="font-bold mb-4">EcoSwap</h4>
+                <p>Sustainable marketplace for eco-friendly living</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Quick Links</h4>
+                <ul>
+                    <li><a href="shop.html" class="hover:text-green-300">Shop</a></li>
+                    <li><a href="swap.html" class="hover:text-green-300">Swap</a></li>
+                    <li><a href="donate.html" class="hover:text-green-300">Donate</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Community</h4>
+                <ul>
+                    <li><a href="ecohub.html" class="hover:text-green-300">Eco-Hubs</a></li>
+                    <li><a href="#" class="hover:text-green-300">Blog</a></li>
+                    <li><a href="#" class="hover:text-green-300">Events</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Connect With Us</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-2xl">🌐</a>
+                    <a href="#" class="text-2xl">📸</a>
+                    <a href="#" class="text-2xl">🐦</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-8">
+            <p>&copy; 2024 EcoSwap. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Optional: Handle email form submission -->
+    <script>
+        document.querySelector('button').addEventListener('click', () => {
+            const email = document.querySelector('#email').value;
+            if (email) {
+                alert(`You will be notified at ${email} when the product is back in stock!`);
+                document.querySelector('#email').value = '';  // Clear the input field
+            } else {
+                alert('Please enter a valid email address.');
+            }
+        });
+    </script>
+</body>
+</html>
