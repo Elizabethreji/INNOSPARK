@@ -103,14 +103,14 @@ For Software:
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot1](Screenshot 2025-01-26 102952.png)
+*This is the main page of the website.And from this page it will navigate to another pages *
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot2](Screenshot 2025-01-26 103209.png)
+*This is the page we get when we click on featuring products .Each featured product is displayed independently.*
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot3](Screenshot 2025-01-26 103601.png)
+*This page shows the donation centres near to our location.*
 
 # Diagrams
 ![Workflow](Add your workflow/architecture diagram here)
@@ -129,14 +129,14 @@ For Hardware:
 ![Team](Add photo of your team here)
 
 
-![Components](Add photo of your components here)
-*List out all components shown*
+![Components](Screenshot 2025-01-26 102852 - Copy.png)
+*This is the signup page*
 
-![Build](Add photos of build process here)
-*Explain the build steps*
+![Build](Screenshot 2025-01-26 102924.png)
+*Login page*
 
-![Final](Add photo of final product here)
-*Explain the final build*
+![Final](Screenshot 2025-01-26 102952.png)
+*The main page of the website*
 
 ### Project Demo
 # Video
