@@ -129,7 +129,7 @@ For Hardware:
 ![Team](Add photo of your team here)
 
 
-![Components](Screenshot 2025-01-26 102852 - Copy.png)
+![Components](Screenshot 2025-01-26 102852-Copy.png)
 *This is the signup page*
 
 ![Build](Screenshot 2025-01-26 102924.png)
@@ -140,8 +140,8 @@ For Hardware:
 
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
+[EcoSwap - 26 January 2025.mp4]
+*It travells through each page of website*
 
 # Additional Demos
 [Add any extra demo materials/links]
