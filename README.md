@@ -154,7 +154,7 @@ For Hardware:
 
 ### Project Demo
 # Video
-["C:\Users\athir\OneDrive\Desktop\INNOSPARK\Recording 2025-01-26 112554.mp4"]
+[https://youtu.be/c-nxaE509Cs]
 *It travells through each page of website*
 
 # Additional Demos
